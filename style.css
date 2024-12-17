@@ -1,0 +1,92 @@
+body{
+    background-color: green;
+    text-align: start;
+}
+
+.container {
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: 200px  200px 200px;
+    grid-gap: 10px;
+    display: grid;
+}
+.item {
+     padding: 10px; 
+     border: 2px solid black; 
+     background-color: darkorchid;
+}
+.tovar_im { 
+    display: block; 
+     padding: 1px;  
+     border: 2px solid rgb(211, 67, 67); 
+     background-image: url(images/tovar1.png)
+}
+.tovar_nazva{ 
+    display: block; 
+     padding: 5px;  
+     border: 2px solid rgb(211, 67, 67); 
+
+}
+.tovar_cena{ 
+    display: block; 
+     padding: 5px;  
+     border: 2px solid rgb(211, 67, 67); 
+}
+.tovar-container{ 
+    display: grid;
+     grid-template-areas: 'image'
+     'nazva cena ';
+     grid-gap: 1px;
+     grid-template-columns: 3fr 1fr 1fr; 
+     grid-template-rows: 130px 30px;
+     background-color: burlywood;
+ }
+.tovar-container .tovar {
+    padding: 10px; 
+     border: 2px solid rgb(211, 67, 67); 
+}
+img {
+    max-width: 100%;
+    height: auto;
+    size: 25%;
+    opacity: 0.5;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(4 , 1fr);
+        grid-template-rows: 200px  200px 200px;
+        grid-gap: 10px;
+        display: grid;}
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:  300px 300px;
+        grid-gap: 10px;
+        display: grid;}
+        .tovar-container{ 
+            display: grid;
+             grid-template-areas: 'image'
+             'nazva cena ';
+             grid-gap: 1px;
+             grid-template-columns: 3fr 1fr 1fr; 
+             grid-template-rows: 200px 30px;
+             background-color: burlywood;}
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        grid-template-columns:  1fr;
+        grid-template-rows:   300px;
+        grid-gap: 10px;
+        display: grid;}
+        .tovar-container{ 
+            display: grid;
+             grid-template-areas: 'image'
+             'nazva cena ';
+             grid-gap: 1px;
+             /* grid-template-columns: 3fr 1fr 1fr;  */
+             grid-template-rows: 230px 30px;
+             background-color: burlywood;}
+ }
